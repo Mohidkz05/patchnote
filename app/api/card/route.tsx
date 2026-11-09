@@ -44,6 +44,12 @@ export function GET(req: Request) {
         </div>
       </div>
     ),
-    { width: 1200, height: 630 },
+    {
+      width: 1200,
+      height: 630,
+      headers: {
+        "Cache-Control": "public, s-maxage=86400",
+      },
+    },
   );
 }
